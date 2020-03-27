@@ -18,7 +18,6 @@ export const AuthProvider = ({ isLoggedIn: isLoggedInProp, children }) => {
 		try {
 			await AsyncStorage.setItem('isLoggedIn', 'false');
 			setIsLoggedIn(false);
-			console.log('아웃누름');
 		} catch (e) {
 			console.log(e);
 		}

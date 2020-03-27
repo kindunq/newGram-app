@@ -10,7 +10,7 @@ import ApolloClient from 'apollo-boost';
 import { ThemeProvider } from 'styled-components';
 import { ApolloProvider } from 'react-apollo-hooks';
 import apolloClientOptions from './apollo';
-import style from './style';
+import styles from './styles';
 import NavController from './components/NavController';
 import { AuthProvider } from './AuthContext';
 
@@ -52,7 +52,7 @@ export default function App() {
 
 	return loaded && client && isLoggedIn !== null ? (
 		<ApolloProvider client={client}>
-			<ThemeProvider theme={style}>
+			<ThemeProvider theme={styles}>
 				<AuthProvider isLoggedIn={isLoggedIn}>
 					<NavController />
 				</AuthProvider>

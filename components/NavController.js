@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
 import { useIsLoggedIn, useLogIn, useLogOut } from '../AuthContext';
+import AuthNavigation from '../navigation/AuthNavigation';
 
 export default () => {
 	const isLoggedIn = useIsLoggedIn();
@@ -13,9 +14,7 @@ export default () => {
 					<Text>logOut</Text>
 				</TouchableOpacity>
 			) : (
-				<TouchableOpacity onPress={logIn}>
-					<Text>logIn</Text>
-				</TouchableOpacity>
+				<AuthNavigation />
 			)}
 		</View>
 	);
