@@ -14,7 +14,9 @@ export default () => {
 					<Text>logOut</Text>
 				</TouchableOpacity>
 			) : (
-				<AuthNavigation />
+				<TouchableOpacity onPress={logOut}>
+					<Text>logOut</Text>
+				</TouchableOpacity>
 			)}
 		</View>
 	);
